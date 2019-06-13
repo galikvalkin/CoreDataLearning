@@ -17,8 +17,20 @@
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController{
     self = [super initWithRootViewController:rootViewController];
+    NSLog(@"initWithRootViewController");
+    [self setAppearence];
     self.delegate = self;
     return self;
+}
+
+- (void) setAppearence {
+    NSDictionary *titleTextAttributes = [
+                                         NSDictionary dictionaryWithObjectsAndKeys:
+                                         [UIFont fontWithName:@"Montserrat-Regular" size: 18.0],
+                                         NSFontAttributeName,
+                                         nil];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal ];
+    [[UINavigationBar appearance] setTitleTextAttributes: titleTextAttributes];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -30,6 +42,8 @@
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     NSString *className = NSStringFromClass([viewController class]);
+    
+    [self setNavigationBarHidden:[className isEqualToString:@"WelcomeController"] animated:YES];
     NSLog(@"willShowViewController %@", className);
 }
 

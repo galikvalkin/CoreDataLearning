@@ -28,7 +28,6 @@
 - (IBAction)goToSignup:(UIButton *)button {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Signup" bundle:nil];
     UIViewController *sc = [sb instantiateViewControllerWithIdentifier:@"Signup"];
-    
     [self.navigationController pushViewController:sc animated:YES];
 }
 

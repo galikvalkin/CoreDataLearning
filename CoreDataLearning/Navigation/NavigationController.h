@@ -10,5 +10,7 @@
 
 @interface NavigationController : UINavigationController <UINavigationControllerDelegate>
 
+- (void)setAppearence;
+
 @end
 
