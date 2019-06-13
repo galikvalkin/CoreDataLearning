@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Signin Controller-->
         <scene sceneID="8ni-YS-QZk">
@@ -17,15 +22,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-bP-Dts">
-                                <rect key="frame" x="166" y="323" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNb-UN-yYW">
+                                <rect key="frame" x="40" y="273.5" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U2D-P4-nAA"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-vc-lRp">
+                                <rect key="frame" x="40" y="323.5" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OFZ-8g-Cm0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-GP-e2R">
+                                <rect key="frame" x="40" y="597" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.2553784865" green="0.33222050149999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ijz-Pb-RJU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SUBMIT"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KNb-UN-yYW" firstAttribute="centerY" secondItem="JWc-Jb-Nm8" secondAttribute="centerY" constant="-40" id="Epv-To-5fI"/>
+                            <constraint firstItem="6lI-n4-hxa" firstAttribute="trailing" secondItem="KNb-UN-yYW" secondAttribute="trailing" constant="40" id="PFB-9C-9sP"/>
+                            <constraint firstItem="6lI-n4-hxa" firstAttribute="trailing" secondItem="uAk-GP-e2R" secondAttribute="trailing" constant="40" id="V1R-kI-7BY"/>
+                            <constraint firstItem="6lI-n4-hxa" firstAttribute="trailing" secondItem="BQU-vc-lRp" secondAttribute="trailing" constant="40" id="dT3-E7-8Pl"/>
+                            <constraint firstItem="KNb-UN-yYW" firstAttribute="leading" secondItem="6lI-n4-hxa" secondAttribute="leading" constant="40" id="ecY-cM-Bxf"/>
+                            <constraint firstItem="BQU-vc-lRp" firstAttribute="top" secondItem="KNb-UN-yYW" secondAttribute="bottom" constant="10" id="gfy-Fp-2Gz"/>
+                            <constraint firstItem="uAk-GP-e2R" firstAttribute="leading" secondItem="6lI-n4-hxa" secondAttribute="leading" constant="40" id="kzM-4I-q0E"/>
+                            <constraint firstItem="6lI-n4-hxa" firstAttribute="bottom" secondItem="uAk-GP-e2R" secondAttribute="bottom" constant="20" id="nhp-bc-eZ8"/>
+                            <constraint firstItem="BQU-vc-lRp" firstAttribute="leading" secondItem="6lI-n4-hxa" secondAttribute="leading" constant="40" id="wIQ-GK-I8b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6lI-n4-hxa"/>
                     </view>
                 </viewController>

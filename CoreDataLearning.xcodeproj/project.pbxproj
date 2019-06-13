@@ -14,6 +14,7 @@
 		15241F6C217669050073C033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15241F6A217669050073C033 /* LaunchScreen.storyboard */; };
 		15241F6F217669050073C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15241F6E217669050073C033 /* main.m */; };
 		157FFC83221047F400EF36AF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 157FFC82221047F400EF36AF /* TabBarController.m */; };
+		15A53DC822B2FD29002C9F84 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */; };
 		15A95A1021F8EB88000D5D3C /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A95A0F21F8EB88000D5D3C /* WelcomeController.m */; };
 		15A95A1221F8ED62000D5D3C /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A95A1121F8ED62000D5D3C /* Signin.storyboard */; };
 		15A95A1521F8ED96000D5D3C /* SigninController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A95A1421F8ED96000D5D3C /* SigninController.m */; };
@@ -34,6 +35,7 @@
 		15241F6E217669050073C033 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		157FFC81221047E400EF36AF /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		157FFC82221047F400EF36AF /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		15A95A0E21F8EB75000D5D3C /* WelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeController.h; sourceTree = "<group>"; };
 		15A95A0F21F8EB88000D5D3C /* WelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeController.m; sourceTree = "<group>"; };
 		15A95A1121F8ED62000D5D3C /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		15241F5B217669030073C033 /* CoreDataLearning */ = {
 			isa = PBXGroup;
 			children = (
+				15A53DBE22B2E65C002C9F84 /* fonts */,
 				15F4EFC9220A266600C038D1 /* Navigation */,
 				15A95A1921F8EFB5000D5D3C /* Views */,
 				15A95A1821F8EF98000D5D3C /* Controllers */,
@@ -87,6 +90,14 @@
 				15241F65217669030073C033 /* CoreDataLearning.xcdatamodeld */,
 			);
 			path = CoreDataLearning;
+			sourceTree = "<group>";
+		};
+		15A53DBE22B2E65C002C9F84 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		15A95A1821F8EF98000D5D3C /* Controllers */ = {
@@ -205,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A53DC822B2FD29002C9F84 /* Montserrat-Regular.ttf in Resources */,
 				15A95A1221F8ED62000D5D3C /* Signin.storyboard in Resources */,
 				15241F6C217669050073C033 /* LaunchScreen.storyboard in Resources */,
 				15241F69217669050073C033 /* Assets.xcassets in Resources */,
