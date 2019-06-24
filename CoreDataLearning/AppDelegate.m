@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WelcomeController.h"
 #import "NavigationController.h"
+#import "CoreData/DataController.h"
 
 @interface AppDelegate ()
 
