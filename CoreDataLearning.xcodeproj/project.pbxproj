@@ -21,6 +21,7 @@
 		15A95A1721F8EF91000D5D3C /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A95A1621F8EF91000D5D3C /* Signup.storyboard */; };
 		15A95A1F21F8F046000D5D3C /* SignupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A95A1E21F8F046000D5D3C /* SignupController.m */; };
 		15F4EFCD220A26B800C038D1 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F4EFCC220A26B800C038D1 /* NavigationController.m */; };
+		15FD14AF22C168E100435B35 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FD14AE22C168E100435B35 /* DataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		15A95A1E21F8F046000D5D3C /* SignupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupController.m; sourceTree = "<group>"; };
 		15F4EFCA220A267A00C038D1 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		15F4EFCC220A26B800C038D1 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		15FD14AE22C168E100435B35 /* DataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		15FD14B022C16B1400435B35 /* DataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		15241F5B217669030073C033 /* CoreDataLearning */ = {
 			isa = PBXGroup;
 			children = (
+				15FD14AD22C168BF00435B35 /* CoreData */,
 				15A53DBE22B2E65C002C9F84 /* fonts */,
 				15F4EFC9220A266600C038D1 /* Navigation */,
 				15A95A1921F8EFB5000D5D3C /* Views */,
@@ -157,6 +161,15 @@
 				157FFC82221047F400EF36AF /* TabBarController.m */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		15FD14AD22C168BF00435B35 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				15FD14AE22C168E100435B35 /* DataController.m */,
+				15FD14B022C16B1400435B35 /* DataController.h */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 				157FFC83221047F400EF36AF /* TabBarController.m in Sources */,
 				15A95A1F21F8F046000D5D3C /* SignupController.m in Sources */,
 				15F4EFCD220A26B800C038D1 /* NavigationController.m in Sources */,
+				15FD14AF22C168E100435B35 /* DataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
