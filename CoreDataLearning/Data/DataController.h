@@ -13,6 +13,12 @@
 
 @property (strong, nonatomic) NSPersistentContainer *persistentContainer;
 
-- (id)initWithCompletionBlock:(void (^)(void))callback;
+- (id)init:(void (^)(void))callback;
+
+- (NSArray *)userList;
+
+- (void)addUser:(NSString *)name;
+
+- (void)saveContext;
 
 @end

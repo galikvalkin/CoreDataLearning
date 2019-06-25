@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeController.h"
+#import "AppDelegate.h"
 
 @interface WelcomeController()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"WelcomeController now used");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    DataController *dataController = appDelegate.dataContainer;
+    [dataController addUser:@"TEST-USER"];
+    NSArray *users = [dataController userList];
+    NSLog(@"name is: %@", [users valueForKey:@"name"]);
 }
 
 - (IBAction)goToSignin:(UIButton *)button {

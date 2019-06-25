@@ -8,17 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Data/DataController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (strong) DataController *dataContainer;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
-
-- (void)saveContext;
-
 
 @end
 

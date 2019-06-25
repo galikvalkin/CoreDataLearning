@@ -81,7 +81,7 @@
 		15241F5B217669030073C033 /* CoreDataLearning */ = {
 			isa = PBXGroup;
 			children = (
-				15FD14AD22C168BF00435B35 /* CoreData */,
+				15FD14AD22C168BF00435B35 /* Data */,
 				15A53DBE22B2E65C002C9F84 /* fonts */,
 				15F4EFC9220A266600C038D1 /* Navigation */,
 				15A95A1921F8EFB5000D5D3C /* Views */,
@@ -91,7 +91,6 @@
 				15241F68217669050073C033 /* Assets.xcassets */,
 				15241F6D217669050073C033 /* Info.plist */,
 				15241F6E217669050073C033 /* main.m */,
-				15241F65217669030073C033 /* CoreDataLearning.xcdatamodeld */,
 			);
 			path = CoreDataLearning;
 			sourceTree = "<group>";
@@ -163,13 +162,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		15FD14AD22C168BF00435B35 /* CoreData */ = {
+		15FD14AD22C168BF00435B35 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				15241F65217669030073C033 /* CoreDataLearning.xcdatamodeld */,
 				15FD14AE22C168E100435B35 /* DataController.m */,
 				15FD14B022C16B1400435B35 /* DataController.h */,
 			);
-			path = CoreData;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
