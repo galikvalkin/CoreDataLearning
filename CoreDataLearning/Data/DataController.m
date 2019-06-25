@@ -54,4 +54,12 @@
     return results;
 }
 
+- (void)deleteUserList {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSBatchDeleteRequest *deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
+    
+    [context executeRequest:deleteRequest error:nil];
+}
+
 @end

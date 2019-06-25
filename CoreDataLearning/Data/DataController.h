@@ -21,4 +21,6 @@
 
 - (void)saveContext;
 
+- (void)deleteUserList;
+
 @end
