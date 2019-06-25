@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataControllerProtocol.h"
+#import "BaseController.h"
 
-@interface SigninController : UIViewController <UITextFieldDelegate>
+@interface SigninController : BaseController <UITextFieldDelegate>
 
 @end

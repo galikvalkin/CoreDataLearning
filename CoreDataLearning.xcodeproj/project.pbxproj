@@ -14,6 +14,7 @@
 		15241F6C217669050073C033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15241F6A217669050073C033 /* LaunchScreen.storyboard */; };
 		15241F6F217669050073C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15241F6E217669050073C033 /* main.m */; };
 		157FFC83221047F400EF36AF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 157FFC82221047F400EF36AF /* TabBarController.m */; };
+		1587B17322C2554A00053B4B /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1587B17222C2554A00053B4B /* BaseController.m */; };
 		15A53DC822B2FD29002C9F84 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */; };
 		15A95A1021F8EB88000D5D3C /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A95A0F21F8EB88000D5D3C /* WelcomeController.m */; };
 		15A95A1221F8ED62000D5D3C /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A95A1121F8ED62000D5D3C /* Signin.storyboard */; };
@@ -36,6 +37,9 @@
 		15241F6E217669050073C033 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		157FFC81221047E400EF36AF /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		157FFC82221047F400EF36AF /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		1587B16F22C2531B00053B4B /* DataControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataControllerProtocol.h; sourceTree = "<group>"; };
+		1587B17122C2553C00053B4B /* BaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		1587B17222C2554A00053B4B /* BaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
 		15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		15A95A0E21F8EB75000D5D3C /* WelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeController.h; sourceTree = "<group>"; };
 		15A95A0F21F8EB88000D5D3C /* WelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeController.m; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 			path = CoreDataLearning;
 			sourceTree = "<group>";
 		};
+		1587B17022C2553200053B4B /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				1587B17122C2553C00053B4B /* BaseController.h */,
+				1587B17222C2554A00053B4B /* BaseController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
 		15A53DBE22B2E65C002C9F84 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		15A95A1821F8EF98000D5D3C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1587B17022C2553200053B4B /* BaseController */,
 				15A95A1C21F8F010000D5D3C /* Signup */,
 				15A95A1B21F8F000000D5D3C /* Signin */,
 				15A95A1A21F8EFF6000D5D3C /* Welcome */,
@@ -168,6 +182,7 @@
 				15241F65217669030073C033 /* CoreDataLearning.xcdatamodeld */,
 				15FD14AE22C168E100435B35 /* DataController.m */,
 				15FD14B022C16B1400435B35 /* DataController.h */,
+				1587B16F22C2531B00053B4B /* DataControllerProtocol.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -245,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1587B17322C2554A00053B4B /* BaseController.m in Sources */,
 				15241F67217669030073C033 /* CoreDataLearning.xcdatamodeld in Sources */,
 				15241F6F217669050073C033 /* main.m in Sources */,
 				15241F5E217669030073C033 /* AppDelegate.m in Sources */,

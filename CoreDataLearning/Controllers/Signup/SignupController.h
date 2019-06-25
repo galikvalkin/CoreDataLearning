@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseController.h"
 
-@interface SignupController : UIViewController <UITextFieldDelegate>
+@interface SignupController : BaseController <UITextFieldDelegate>
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SigninController.h"
+#import "AppDelegate.h"
 
 @interface SigninController ()
 
@@ -50,7 +51,6 @@
         [self.passwordTextField becomeFirstResponder];
     } else if (textField == self.passwordTextField) {
         [self.passwordTextField resignFirstResponder];
-        NSLog(@"Thats it folks");
     }
     return YES;
 }

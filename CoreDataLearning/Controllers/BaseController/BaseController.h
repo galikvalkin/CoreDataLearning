@@ -1,5 +1,5 @@
 //
-//  WelcomeController.h
+//  SigninController.h
 //  CoreDataLearning
 //
 //  Created by Valentine Galkin on 1/23/19.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseController.h"
+#import "DataControllerProtocol.h"
 
-
-@interface WelcomeController : BaseController
+@interface BaseController : UIViewController <DataControllerProtocol>
 
 @end

@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
-
 @end
 
 
@@ -26,7 +25,6 @@
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
     self.navigationItem.title = @"Signup";
-    
     NSLog(@"SignupController now used");
 }
 
@@ -58,7 +56,6 @@
         [self.confirmPasswordTextField becomeFirstResponder];
     } else if (textField == self.confirmPasswordTextField) {
         [self.confirmPasswordTextField resignFirstResponder];
-        NSLog(@"Thats it folks");
     }
     return YES;
 }
