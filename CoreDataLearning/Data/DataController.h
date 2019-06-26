@@ -23,4 +23,6 @@
 
 - (void)deleteUserList;
 
+- (void)deleteUser:(NSManagedObject *)user;
+
 @end

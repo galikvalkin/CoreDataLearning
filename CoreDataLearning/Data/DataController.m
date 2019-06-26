@@ -60,6 +60,13 @@
     NSBatchDeleteRequest *deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
     
     [context executeRequest:deleteRequest error:nil];
+    [self saveContext];
+}
+
+- (void)deleteUser:(NSManagedObject *)user {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    [context deleteObject:user];
+    [self saveContext];
 }
 
 @end
