@@ -27,11 +27,27 @@
     return self;
 }
 
-- (void)addUser:(NSString *)name {
+
+- (void)addUser:(NSDictionary *)data {
     if (self.persistentContainer != nil) {
         NSManagedObjectContext *context = self.persistentContainer.viewContext;
         NSManagedObject *entity = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
-        [entity setValue:name forKey:@"name"];
+        
+        for (NSString *key in data) {
+            id value = data[key];
+            [entity setValue:value forKey:key];
+        }
+        
+        [self saveContext];
+    }
+}
+
+- (void)updateUser:(NSManagedObject *)user data:(NSDictionary *)data {
+    if (self.persistentContainer != nil) {
+        for (NSString *key in data) {
+            id value = data[key];
+            [user setValue:value forKey:key];
+        }
         [self saveContext];
     }
 }

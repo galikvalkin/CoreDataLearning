@@ -17,7 +17,9 @@
 
 - (NSArray *)userList;
 
-- (void)addUser:(NSString *)name;
+- (void)addUser:(NSDictionary *)data;
+
+- (void)updateUser:(NSManagedObject *)user data:(NSDictionary *)data;
 
 - (void)saveContext;
 
