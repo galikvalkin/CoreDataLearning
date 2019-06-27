@@ -25,14 +25,19 @@
     self.navigationItem.title = @"UserList";
     self.content = [self.dataController userList];
     
-    for (int i = 0; i < [self.content count]; i++) {
-        NSLog(@"user name is: %@", [self.content[i] valueForKey:@"name"]);
-    }
-//    NSArray *users = [self.dataController userList];
-    
     NSLog(@"UserListController now used");
     self.table.delegate = self;
     self.table.dataSource = self;
+    
+    NSManagedObjectContext *context = [self.dataController getContext];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    
+    [notificationCenter addObserver:self selector:@selector(managedObjectContextObjectsDidChange) name:NSManagedObjectContextDidSaveNotification object:context];
+}
+
+- (void)managedObjectContextObjectsDidChange {
+    self.content = [self.dataController userList];
+    [self.tableView reloadData];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {

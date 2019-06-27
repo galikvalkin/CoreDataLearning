@@ -27,4 +27,6 @@
 
 - (void)deleteUser:(NSManagedObject *)user;
 
+- (NSManagedObjectContext *)getContext;
+
 @end

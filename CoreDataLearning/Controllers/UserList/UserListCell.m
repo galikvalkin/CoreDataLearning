@@ -17,6 +17,8 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
+    
+    self.labelField.textColor = [UIColor redColor];
 }
 
 @end

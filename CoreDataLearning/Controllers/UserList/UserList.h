@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DataControllerProtocol.h"
 
-@interface UserListConroller : UITableViewController<DataControllerProtocol, UITableViewDelegate, UITableViewDataSource>
+@interface UserListConroller : UITableViewController<DataControllerProtocol, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @end

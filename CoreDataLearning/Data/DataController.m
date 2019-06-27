@@ -85,4 +85,10 @@
     [self saveContext];
 }
 
+
+- (NSManagedObjectContext *)getContext {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    return context;
+}
+
 @end
