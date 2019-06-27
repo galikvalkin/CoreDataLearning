@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    WelcomeController *controller = [[UIStoryboard storyboardWithName:@"Welcome" bundle:nil] instantiateViewControllerWithIdentifier:@"Welcome"];
+    WelcomeController *controller = [[UIStoryboard storyboardWithName:@"UserList" bundle:nil] instantiateViewControllerWithIdentifier:@"UserList"];
 
     self.dataContainer = [[DataController alloc] init:^{}];
     
