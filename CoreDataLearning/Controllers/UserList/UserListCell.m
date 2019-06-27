@@ -1,8 +1,8 @@
 //
-//  SignupController.m
+//  UserListCell.m
 //  CoreDataLearning
 //
-//  Created by Valentine Galkin on 1/23/19.
+//  Created by Valentine Galkin on 6/27/19.
 //  Copyright © 2019 Valentine Galkin. All rights reserved.
 //
 
@@ -17,8 +17,6 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-    
-    self.labelField.textColor = [UIColor redColor];
 }
 
 @end
