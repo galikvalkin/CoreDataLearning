@@ -29,6 +29,8 @@
     self.table.delegate = self;
     self.table.dataSource = self;
     
+   
+    
     NSManagedObjectContext *context = [self.dataController getContext];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     
