@@ -28,6 +28,7 @@
     NSLog(@"UserListController now used");
     self.table.delegate = self;
     self.table.dataSource = self;
+    self.table.contentInset = UIEdgeInsetsMake(0, -15, 0, 0);
     
    
     
