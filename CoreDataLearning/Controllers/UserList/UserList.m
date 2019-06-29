@@ -22,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"UserList";
+    self.navigationItem.title = @"Users";
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
+    self.navigationItem.rightBarButtonItem = rightButton;
     self.content = [self.dataController userList];
     
     NSLog(@"UserListController now used");
@@ -36,6 +38,13 @@
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     
     [notificationCenter addObserver:self selector:@selector(managedObjectContextObjectsDidChange) name:NSManagedObjectContextDidSaveNotification object:context];
+}
+
+- (void)addNew {
+    NSLog(@"Add New Was pressed");
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"AddUser" bundle:nil];
+    UIViewController *sc = [sb instantiateViewControllerWithIdentifier:@"AddUser"];
+    [self.navigationController pushViewController:sc animated:YES];
 }
 
 - (void)managedObjectContextObjectsDidChange {

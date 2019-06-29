@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add User Controller-->
+        <scene sceneID="fYN-Gb-Cwg">
+            <objects>
+                <viewController storyboardIdentifier="AddUser" id="bzf-Tw-RxN" customClass="AddUserController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbv-8E-Pr0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3w-2Y-AeC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pf-2v-azM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlu-Xt-8Mc">
+                                                <rect key="frame" x="40" y="349" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fia-iq-Dzc"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kz-ZG-Pfr">
+                                                <rect key="frame" x="40" y="399" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dpZ-Vn-Yxm"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zlu-Xt-8Mc" firstAttribute="leading" secondItem="0Pf-2v-azM" secondAttribute="leading" constant="40" id="JUg-39-9PO"/>
+                                            <constraint firstItem="zlu-Xt-8Mc" firstAttribute="centerY" secondItem="0Pf-2v-azM" secondAttribute="centerY" constant="-40" id="b4N-PT-MTE"/>
+                                            <constraint firstAttribute="trailing" secondItem="zlu-Xt-8Mc" secondAttribute="trailing" constant="40" id="d0S-Q0-W0o"/>
+                                            <constraint firstAttribute="trailing" secondItem="1kz-ZG-Pfr" secondAttribute="trailing" constant="40" id="ljo-pR-44F"/>
+                                            <constraint firstItem="1kz-ZG-Pfr" firstAttribute="leading" secondItem="0Pf-2v-azM" secondAttribute="leading" constant="40" id="oQq-I5-VMh"/>
+                                            <constraint firstItem="1kz-ZG-Pfr" firstAttribute="top" secondItem="zlu-Xt-8Mc" secondAttribute="bottom" constant="10" id="pvb-bC-d3x"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0Pf-2v-azM" firstAttribute="centerY" secondItem="Q3w-2Y-AeC" secondAttribute="centerY" id="5dy-uX-n4S"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Pf-2v-azM" secondAttribute="bottom" constant="42" id="Bcj-9D-cmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Pf-2v-azM" secondAttribute="trailing" constant="20" id="dlp-y8-Ldv"/>
+                                    <constraint firstItem="0Pf-2v-azM" firstAttribute="top" secondItem="Q3w-2Y-AeC" secondAttribute="top" id="foA-7a-jIO"/>
+                                    <constraint firstItem="0Pf-2v-azM" firstAttribute="leading" secondItem="Q3w-2Y-AeC" secondAttribute="leading" id="iSA-A1-AG4"/>
+                                    <constraint firstItem="0Pf-2v-azM" firstAttribute="centerX" secondItem="Q3w-2Y-AeC" secondAttribute="centerX" id="m7a-Zt-cBI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q3w-2Y-AeC" firstAttribute="leading" secondItem="ppk-Qs-lu1" secondAttribute="leading" id="BYs-f8-TOp"/>
+                            <constraint firstItem="ppk-Qs-lu1" firstAttribute="trailing" secondItem="Q3w-2Y-AeC" secondAttribute="trailing" id="Zzl-WN-s2O"/>
+                            <constraint firstItem="ppk-Qs-lu1" firstAttribute="bottom" secondItem="Q3w-2Y-AeC" secondAttribute="bottom" id="cNe-Xf-4SD"/>
+                            <constraint firstItem="Q3w-2Y-AeC" firstAttribute="top" secondItem="ppk-Qs-lu1" secondAttribute="top" id="nEa-PV-cXg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppk-Qs-lu1"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageField" destination="1kz-ZG-Pfr" id="N3m-gh-GzP"/>
+                        <outlet property="nameField" destination="zlu-Xt-8Mc" id="lkP-bH-Zmu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBs-Pi-8GL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="149"/>
+        </scene>
+    </scenes>
+</document>

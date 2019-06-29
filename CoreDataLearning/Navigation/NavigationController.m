@@ -29,7 +29,8 @@
                                          [UIFont fontWithName:@"Montserrat-Regular" size: 18.0],
                                          NSFontAttributeName,
                                          nil];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal ];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateHighlighted ];
     [[UINavigationBar appearance] setTitleTextAttributes: titleTextAttributes];
 }
 

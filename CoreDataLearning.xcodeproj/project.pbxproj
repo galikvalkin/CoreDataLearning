@@ -16,6 +16,8 @@
 		156C79E122C4D633007ECD1E /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C79E022C4D633007ECD1E /* UserList.m */; };
 		156C79E322C4D68D007ECD1E /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C79E222C4D68D007ECD1E /* UserList.storyboard */; };
 		156C79E622C4DA31007ECD1E /* UserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C79E522C4DA31007ECD1E /* UserListCell.m */; };
+		1571DC7422C776BE00EBCAEE /* AddUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1571DC7322C776BE00EBCAEE /* AddUser.m */; };
+		1571DC7622C7774D00EBCAEE /* AddUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1571DC7522C7774D00EBCAEE /* AddUser.storyboard */; };
 		157FFC83221047F400EF36AF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 157FFC82221047F400EF36AF /* TabBarController.m */; };
 		1587B17322C2554A00053B4B /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1587B17222C2554A00053B4B /* BaseController.m */; };
 		15A53DC822B2FD29002C9F84 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15A53DC722B2FD29002C9F84 /* Montserrat-Regular.ttf */; };
@@ -43,6 +45,9 @@
 		156C79E222C4D68D007ECD1E /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		156C79E422C4DA22007ECD1E /* UserListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListCell.h; sourceTree = "<group>"; };
 		156C79E522C4DA31007ECD1E /* UserListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListCell.m; sourceTree = "<group>"; };
+		1571DC7222C776B300EBCAEE /* AddUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUser.h; sourceTree = "<group>"; };
+		1571DC7322C776BE00EBCAEE /* AddUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddUser.m; sourceTree = "<group>"; };
+		1571DC7522C7774D00EBCAEE /* AddUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUser.storyboard; sourceTree = "<group>"; };
 		157FFC81221047E400EF36AF /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		157FFC82221047F400EF36AF /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		1587B16F22C2531B00053B4B /* DataControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataControllerProtocol.h; sourceTree = "<group>"; };
@@ -118,6 +123,15 @@
 			path = UserList;
 			sourceTree = "<group>";
 		};
+		1571DC7122C776A000EBCAEE /* AddUser */ = {
+			isa = PBXGroup;
+			children = (
+				1571DC7222C776B300EBCAEE /* AddUser.h */,
+				1571DC7322C776BE00EBCAEE /* AddUser.m */,
+			);
+			path = AddUser;
+			sourceTree = "<group>";
+		};
 		1587B17022C2553200053B4B /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +152,7 @@
 		15A95A1821F8EF98000D5D3C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1571DC7122C776A000EBCAEE /* AddUser */,
 				156C79DE22C4D5FE007ECD1E /* UserList */,
 				1587B17022C2553200053B4B /* BaseController */,
 				15A95A1C21F8F010000D5D3C /* Signup */,
@@ -155,6 +170,7 @@
 				15A95A1121F8ED62000D5D3C /* Signin.storyboard */,
 				15A95A1621F8EF91000D5D3C /* Signup.storyboard */,
 				156C79E222C4D68D007ECD1E /* UserList.storyboard */,
+				1571DC7522C7774D00EBCAEE /* AddUser.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A53DC822B2FD29002C9F84 /* Montserrat-Regular.ttf in Resources */,
+				1571DC7622C7774D00EBCAEE /* AddUser.storyboard in Resources */,
 				15A95A1221F8ED62000D5D3C /* Signin.storyboard in Resources */,
 				15241F6C217669050073C033 /* LaunchScreen.storyboard in Resources */,
 				15241F69217669050073C033 /* Assets.xcassets in Resources */,
@@ -293,6 +310,7 @@
 				157FFC83221047F400EF36AF /* TabBarController.m in Sources */,
 				15A95A1F21F8F046000D5D3C /* SignupController.m in Sources */,
 				15F4EFCD220A26B800C038D1 /* NavigationController.m in Sources */,
+				1571DC7422C776BE00EBCAEE /* AddUser.m in Sources */,
 				15FD14AF22C168E100435B35 /* DataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
