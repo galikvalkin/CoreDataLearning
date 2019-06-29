@@ -93,6 +93,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="KNb-UN-yYW" id="M1r-dP-7Uf"/>
                         <outlet property="passwordTextField" destination="BQU-vc-lRp" id="sXA-hI-Rhw"/>
+                        <outlet property="submitButton" destination="uAk-GP-e2R" id="Kei-xM-Cr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vq-jo-bVK" userLabel="First Responder" sceneMemberID="firstResponder"/>

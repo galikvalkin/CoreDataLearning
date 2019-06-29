@@ -6,6 +6,7 @@
 //  Copyright © 2019 Valentine Galkin. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "SignupController.h"
 
 @interface SignupController ()
@@ -13,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
@@ -24,6 +26,8 @@
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
+    [self.submitButton addTarget:self action:@selector(onSubmit) forControlEvents:UIControlEventTouchDown];
+    
     self.navigationItem.title = @"Signup";
     NSLog(@"SignupController now used");
 }
@@ -38,6 +42,12 @@
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)onSubmit {
+    NSLog(@"onSubmit was called");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate setAuthorizedNavigation];
 }
 
 

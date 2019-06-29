@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WelcomeController.h"
+#import "UserList.h"
 #import "NavigationController.h"
 #import "DataController.h"
 
@@ -20,13 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    WelcomeController *controller = [[UIStoryboard storyboardWithName:@"UserList" bundle:nil] instantiateViewControllerWithIdentifier:@"UserList"];
 
     self.dataContainer = [[DataController alloc] init:^{}];
-    
-    self.navigationController = [[NavigationController alloc] initWithRootViewController:controller];
-    
-    self.window.rootViewController = self.navigationController;
+
+    [self setUnauthorizedNavigation];
     
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
@@ -62,6 +60,26 @@
     }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+}
+
+- (UIViewController *)setController:(NSString *)storyboardName and:(NSString *)controllerName {
+    return [[UIStoryboard storyboardWithName:storyboardName bundle:nil] instantiateViewControllerWithIdentifier:controllerName];
+}
+
+- (void)setRootViewController: (UIViewController *)controller {
+    self.navigationController = [[NavigationController alloc] initWithRootViewController:controller];
+    
+    self.window.rootViewController = self.navigationController;
+}
+
+- (void)setUnauthorizedNavigation {
+    WelcomeController *controller = (WelcomeController *)[self setController:@"Welcome" and:@"Welcome"];
+    [self setRootViewController:controller];
+}
+
+- (void)setAuthorizedNavigation {
+    UserListConroller *controller = (UserListConroller *)[self setController:@"UserList" and:@"UserList"];
+    [self setRootViewController:controller];
 }
 
 @end

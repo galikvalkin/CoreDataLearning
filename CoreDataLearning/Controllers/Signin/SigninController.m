@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
+    [self.submitButton addTarget:self action:@selector(onSubmit) forControlEvents:UIControlEventTouchDown];
     self.navigationItem.title = @"Signin";
     NSLog(@"SigninController now used");
 }
@@ -40,6 +42,12 @@
 
 - (IBAction)onChangeEmail:(UITextField *)textField {
     
+}
+
+- (void)onSubmit {
+    NSLog(@"onSubmit was called");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate setAuthorizedNavigation];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
