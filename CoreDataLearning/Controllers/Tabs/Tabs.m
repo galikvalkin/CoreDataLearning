@@ -50,8 +50,20 @@
     if ([selectedController class] == [AddUserController class]) {
         AddUserController *addUser = (AddUserController *)selectedController;
         [addUser save];
+        [self setUsersHeader];
         [self setSelectedIndex:0];
     }
+}
+
+- (void)setUsersHeader {
+    self.navigationItem.title = @"Users";
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
+- (void)setAddUserHeader {
+    self.navigationItem.title = @"Add User";
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
@@ -59,21 +71,11 @@
     
     NSLog(@"Tab index = %u", (int)indexOfTab);
     if ((int)indexOfTab == 0) {
-        self.navigationItem.title = @"Users";
+        [self setUsersHeader];
     } else if ((int)indexOfTab == 1) {
-        self.navigationItem.title = @"Add User";
-        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
-        self.navigationItem.rightBarButtonItem = rightButton;
+        [self setAddUserHeader];
     }
     NSLog(@"tab changed");
-}
-
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-    return YES;
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    NSLog(@"tab changed - 2");
 }
 
 @end
