@@ -11,6 +11,6 @@
 
 @interface AddUserController : BaseController <UITextFieldDelegate>
 
-- (void)save;
+- (BOOL)save;
 
 @end

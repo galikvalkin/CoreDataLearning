@@ -23,10 +23,7 @@
     NSLog(@"TabsController now used");
     self.delegate = self;
     
-//    UITabBarController *tabBar = (UITabBarController *) self.window.rootViewController;
-//    [tabBar setDelegate:self];
-    
-    self.navigationItem.title = @"Users";
+    [self setUsersHeader];
     
     UserListConroller *userListController = (UserListConroller *)[self setController:@"UserList" and:@"UserList"];
     UITabBarItem *userListTabbarItem = [[UITabBarItem alloc] initWithTitle:@"Users" image:nil tag:0];
@@ -38,6 +35,7 @@
     
     
     self.viewControllers = @[userListController, addUserController];
+    
 }
 
 - (UIViewController *)setController:(NSString *)storyboardName and:(NSString *)controllerName {
@@ -49,9 +47,12 @@
     
     if ([selectedController class] == [AddUserController class]) {
         AddUserController *addUser = (AddUserController *)selectedController;
-        [addUser save];
-        [self setUsersHeader];
-        [self setSelectedIndex:0];
+        BOOL saved = [addUser save];
+        if (saved) {
+            [self setUsersHeader];
+            [self setSelectedIndex:0];
+        }
+        
     }
 }
 
@@ -69,13 +70,12 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSUInteger indexOfTab = [[tabBar items] indexOfObject:item];
     
-    NSLog(@"Tab index = %u", (int)indexOfTab);
-    if ((int)indexOfTab == 0) {
+    int index = (int)indexOfTab;
+    if (index == 0) {
         [self setUsersHeader];
-    } else if ((int)indexOfTab == 1) {
+    } else if (index == 1) {
         [self setAddUserHeader];
     }
-    NSLog(@"tab changed");
 }
 
 @end

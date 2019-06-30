@@ -30,7 +30,7 @@
     NSLog(@"AddUserController now used");
 }
 
-- (void)save {
+- (BOOL)save {
     NSString *name = self.nameField.text;
     NSString *age = self.ageField.text;
     
@@ -46,7 +46,10 @@
                                        }];
         [self clearForm];
         [self.navigationController popViewControllerAnimated:YES];
+        return YES;
     }
+    
+    return NO;
 }
 
 - (void)clearForm {
