@@ -36,14 +36,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNA-C4-s6e">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4I-VG-o3a">
-                                                            <rect key="frame" x="10" y="0.0" width="56" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4I-VG-o3a">
+                                                            <rect key="frame" x="10" y="0.0" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-qU-PWc">
-                                                            <rect key="frame" x="76" y="0.0" width="46.666666666666657" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-qU-PWc">
+                                                            <rect key="frame" x="20" y="0.0" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -60,14 +60,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZh-21-mWI">
                                                     <rect key="frame" x="0.0" y="22" width="414" height="21.666666666666671"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-dX-Dkg">
-                                                            <rect key="frame" x="10" y="0.0" width="37.666666666666664" height="21.666666666666668"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-dX-Dkg">
+                                                            <rect key="frame" x="10" y="0.0" width="0.0" height="21.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-sK-mO4">
-                                                            <rect key="frame" x="57.666666666666671" y="0.0" width="46.666666666666671" height="21.666666666666668"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-sK-mO4">
+                                                            <rect key="frame" x="20" y="0.0" width="0.0" height="21.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -100,9 +100,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ageField" destination="H3H-sK-mO4" id="vjG-Rw-YOv"/>
-                                    <outlet property="contentView" destination="RHq-AF-WNO" id="IHk-sX-yY5"/>
-                                    <outlet property="labelField" destination="oIH-qU-PWc" id="g0D-HS-iU1"/>
+                                    <outlet property="ageText" destination="z3Y-dX-Dkg" id="3Mn-3S-Q3a"/>
+                                    <outlet property="ageValue" destination="H3H-sK-mO4" id="gWO-P3-mO6"/>
+                                    <outlet property="labelText" destination="v4I-VG-o3a" id="eoa-Mf-Lmf"/>
+                                    <outlet property="labelValue" destination="oIH-qU-PWc" id="9W2-bn-Y0O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

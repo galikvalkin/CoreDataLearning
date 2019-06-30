@@ -17,6 +17,8 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
+    self.labelText.text = @"Name:";
+    self.ageText.text = @"Age:";
 }
 
 @end

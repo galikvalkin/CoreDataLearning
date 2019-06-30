@@ -10,7 +10,9 @@
 
 @interface UserListCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *labelField;
-@property (weak, nonatomic) IBOutlet UILabel *ageField;
+@property (weak, nonatomic) IBOutlet UILabel *labelText;
+@property (weak, nonatomic) IBOutlet UILabel *labelValue;
+@property (weak, nonatomic) IBOutlet UILabel *ageText;
+@property (weak, nonatomic) IBOutlet UILabel *ageValue;
 
 @end

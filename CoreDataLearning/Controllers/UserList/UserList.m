@@ -64,9 +64,9 @@
 
     NSManagedObject *item = self.content[indexPath.section];
     
-    cell.labelField.text = [item valueForKey:@"name"];
+    cell.labelValue.text = [item valueForKey:@"name"];
     NSString *age = [NSString stringWithFormat:@"%@", [item valueForKey:@"age"]];
-    cell.ageField.text = age;
+    cell.ageValue.text = age;
     
     
     return cell;
