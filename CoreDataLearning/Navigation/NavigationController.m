@@ -24,14 +24,20 @@
 }
 
 - (void) setAppearence {
+    
+    UIFont *font = [UIFont fontWithName:@"Montserrat-Regular" size: 18.0];
     NSDictionary *titleTextAttributes = [
                                          NSDictionary dictionaryWithObjectsAndKeys:
-                                         [UIFont fontWithName:@"Montserrat-Regular" size: 18.0],
+                                         font,
                                          NSFontAttributeName,
                                          nil];
     [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal];
     [[UIBarButtonItem appearance] setTitleTextAttributes:titleTextAttributes forState:UIControlStateHighlighted ];
     [[UINavigationBar appearance] setTitleTextAttributes: titleTextAttributes];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:font
+                                                        } forState:UIControlStateNormal];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{

@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) UINavigationController *navigationController;
 
+- (void)setUnauthorizedNavigation;
 - (void)setAuthorizedNavigation;
 
 @end

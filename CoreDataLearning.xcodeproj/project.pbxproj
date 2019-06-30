@@ -13,6 +13,10 @@
 		15241F69217669050073C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15241F68217669050073C033 /* Assets.xcassets */; };
 		15241F6C217669050073C033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15241F6A217669050073C033 /* LaunchScreen.storyboard */; };
 		15241F6F217669050073C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15241F6E217669050073C033 /* main.m */; };
+		15547BBA22C8E7CD0001336B /* Tabs.m in Sources */ = {isa = PBXBuildFile; fileRef = 15547BB922C8E7CD0001336B /* Tabs.m */; };
+		15547BBC22C8E92A0001336B /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15547BBB22C8E92A0001336B /* Tabs.storyboard */; };
+		15547BBF22C8E97C0001336B /* First.m in Sources */ = {isa = PBXBuildFile; fileRef = 15547BBE22C8E97C0001336B /* First.m */; };
+		15547BC222C8E9920001336B /* Second.m in Sources */ = {isa = PBXBuildFile; fileRef = 15547BC122C8E9920001336B /* Second.m */; };
 		156C79E122C4D633007ECD1E /* UserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C79E022C4D633007ECD1E /* UserList.m */; };
 		156C79E322C4D68D007ECD1E /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C79E222C4D68D007ECD1E /* UserList.storyboard */; };
 		156C79E622C4DA31007ECD1E /* UserListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156C79E522C4DA31007ECD1E /* UserListCell.m */; };
@@ -40,6 +44,13 @@
 		15241F6B217669050073C033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15241F6D217669050073C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15241F6E217669050073C033 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15547BB822C8E7BE0001336B /* Tabs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tabs.h; sourceTree = "<group>"; };
+		15547BB922C8E7CD0001336B /* Tabs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabs.m; sourceTree = "<group>"; };
+		15547BBB22C8E92A0001336B /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
+		15547BBD22C8E9720001336B /* First.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = First.h; sourceTree = "<group>"; };
+		15547BBE22C8E97C0001336B /* First.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = First.m; sourceTree = "<group>"; };
+		15547BC022C8E9860001336B /* Second.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Second.h; sourceTree = "<group>"; };
+		15547BC122C8E9920001336B /* Second.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Second.m; sourceTree = "<group>"; };
 		156C79DF22C4D612007ECD1E /* UserList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserList.h; sourceTree = "<group>"; };
 		156C79E022C4D633007ECD1E /* UserList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserList.m; sourceTree = "<group>"; };
 		156C79E222C4D68D007ECD1E /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
@@ -112,6 +123,19 @@
 			path = CoreDataLearning;
 			sourceTree = "<group>";
 		};
+		15547BB722C8E7A30001336B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				15547BB822C8E7BE0001336B /* Tabs.h */,
+				15547BB922C8E7CD0001336B /* Tabs.m */,
+				15547BBD22C8E9720001336B /* First.h */,
+				15547BBE22C8E97C0001336B /* First.m */,
+				15547BC022C8E9860001336B /* Second.h */,
+				15547BC122C8E9920001336B /* Second.m */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		156C79DE22C4D5FE007ECD1E /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +176,7 @@
 		15A95A1821F8EF98000D5D3C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				15547BB722C8E7A30001336B /* Tabs */,
 				1571DC7122C776A000EBCAEE /* AddUser */,
 				156C79DE22C4D5FE007ECD1E /* UserList */,
 				1587B17022C2553200053B4B /* BaseController */,
@@ -171,6 +196,7 @@
 				15A95A1621F8EF91000D5D3C /* Signup.storyboard */,
 				156C79E222C4D68D007ECD1E /* UserList.storyboard */,
 				1571DC7522C7774D00EBCAEE /* AddUser.storyboard */,
+				15547BBB22C8E92A0001336B /* Tabs.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +314,7 @@
 				15241F69217669050073C033 /* Assets.xcassets in Resources */,
 				15A95A1721F8EF91000D5D3C /* Signup.storyboard in Resources */,
 				15241F64217669030073C033 /* Welcome.storyboard in Resources */,
+				15547BBC22C8E92A0001336B /* Tabs.storyboard in Resources */,
 				156C79E322C4D68D007ECD1E /* UserList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,13 +332,16 @@
 				15241F6F217669050073C033 /* main.m in Sources */,
 				15241F5E217669030073C033 /* AppDelegate.m in Sources */,
 				156C79E122C4D633007ECD1E /* UserList.m in Sources */,
+				15547BBF22C8E97C0001336B /* First.m in Sources */,
 				15A95A1021F8EB88000D5D3C /* WelcomeController.m in Sources */,
+				15547BBA22C8E7CD0001336B /* Tabs.m in Sources */,
 				15A95A1521F8ED96000D5D3C /* SigninController.m in Sources */,
 				157FFC83221047F400EF36AF /* TabBarController.m in Sources */,
 				15A95A1F21F8F046000D5D3C /* SignupController.m in Sources */,
 				15F4EFCD220A26B800C038D1 /* NavigationController.m in Sources */,
 				1571DC7422C776BE00EBCAEE /* AddUser.m in Sources */,
 				15FD14AF22C168E100435B35 /* DataController.m in Sources */,
+				15547BC222C8E9920001336B /* Second.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

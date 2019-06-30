@@ -73,7 +73,7 @@
 }
 
 - (void)setUnauthorizedNavigation {
-    WelcomeController *controller = (WelcomeController *)[self setController:@"Welcome" and:@"Welcome"];
+    WelcomeController *controller = (WelcomeController *)[self setController:@"Tabs" and:@"Tabs"];
     [self setRootViewController:controller];
 }
 
