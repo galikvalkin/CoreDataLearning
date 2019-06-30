@@ -34,6 +34,8 @@
     NSString *name = self.nameField.text;
     NSString *age = self.ageField.text;
     
+    NSLog(@"save was called");
+    
     if ([name length] != 0 & [age length] != 0) {
         NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
         nf.numberStyle = NSNumberFormatterDecimalStyle;
@@ -42,8 +44,14 @@
                                        @"name": name,
                                        @"age": ageNum
                                        }];
+        [self clearForm];
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+- (void)clearForm {
+    self.nameField.text = @"";
+    self.ageField.text = @"";
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {

@@ -10,6 +10,6 @@
 
 
 
-@interface TabsController : UITabBarController
+@interface TabsController : UITabBarController <UITabBarControllerDelegate>
 
 @end
