@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseController.h"
 
-@interface AddUserController : BaseController <UITextFieldDelegate>
+@interface AddUserController : BaseController <UITextFieldDelegate, UIImagePickerControllerDelegate>
 
 - (BOOL)save;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,28 @@
             <objects>
                 <viewController storyboardIdentifier="AddUser" id="bzf-Tw-RxN" customClass="AddUserController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbv-8E-Pr0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3w-2Y-AeC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Pf-2v-azM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-iz-lRO">
+                                                <rect key="frame" x="131" y="114" width="113" height="113"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="113" id="Jz5-lV-Oic"/>
+                                                    <constraint firstAttribute="height" constant="113" id="cKM-n7-uIB"/>
+                                                </constraints>
+                                                <state key="normal" image="logo"/>
+                                                <connections>
+                                                    <action selector="selectPhoto:" destination="bzf-Tw-RxN" eventType="touchUpInside" id="7I9-ol-O1n"/>
+                                                </connections>
+                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlu-Xt-8Mc">
-                                                <rect key="frame" x="40" y="349" width="334" height="40"/>
+                                                <rect key="frame" x="40" y="263.5" width="295" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="fia-iq-Dzc"/>
                                                 </constraints>
@@ -38,7 +49,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kz-ZG-Pfr">
-                                                <rect key="frame" x="40" y="399" width="334" height="40"/>
+                                                <rect key="frame" x="40" y="313.5" width="295" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="dpZ-Vn-Yxm"/>
                                                 </constraints>
@@ -50,8 +61,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="zlu-Xt-8Mc" firstAttribute="leading" secondItem="0Pf-2v-azM" secondAttribute="leading" constant="40" id="JUg-39-9PO"/>
+                                            <constraint firstItem="1wX-iz-lRO" firstAttribute="centerY" secondItem="0Pf-2v-azM" secondAttribute="centerY" constant="-153" id="V3g-aK-LQn"/>
                                             <constraint firstItem="zlu-Xt-8Mc" firstAttribute="centerY" secondItem="0Pf-2v-azM" secondAttribute="centerY" constant="-40" id="b4N-PT-MTE"/>
                                             <constraint firstAttribute="trailing" secondItem="zlu-Xt-8Mc" secondAttribute="trailing" constant="40" id="d0S-Q0-W0o"/>
+                                            <constraint firstItem="1wX-iz-lRO" firstAttribute="centerX" secondItem="0Pf-2v-azM" secondAttribute="centerX" id="e99-Vn-pro"/>
                                             <constraint firstAttribute="trailing" secondItem="1kz-ZG-Pfr" secondAttribute="trailing" constant="40" id="ljo-pR-44F"/>
                                             <constraint firstItem="1kz-ZG-Pfr" firstAttribute="leading" secondItem="0Pf-2v-azM" secondAttribute="leading" constant="40" id="oQq-I5-VMh"/>
                                             <constraint firstItem="1kz-ZG-Pfr" firstAttribute="top" secondItem="zlu-Xt-8Mc" secondAttribute="bottom" constant="10" id="pvb-bC-d3x"/>
@@ -60,8 +73,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0Pf-2v-azM" firstAttribute="centerY" secondItem="Q3w-2Y-AeC" secondAttribute="centerY" id="5dy-uX-n4S"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Pf-2v-azM" secondAttribute="bottom" constant="42" id="Bcj-9D-cmo"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Pf-2v-azM" secondAttribute="trailing" constant="20" id="dlp-y8-Ldv"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Pf-2v-azM" secondAttribute="bottom" id="Bcj-9D-cmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Pf-2v-azM" secondAttribute="trailing" id="dlp-y8-Ldv"/>
                                     <constraint firstItem="0Pf-2v-azM" firstAttribute="top" secondItem="Q3w-2Y-AeC" secondAttribute="top" id="foA-7a-jIO"/>
                                     <constraint firstItem="0Pf-2v-azM" firstAttribute="leading" secondItem="Q3w-2Y-AeC" secondAttribute="leading" id="iSA-A1-AG4"/>
                                     <constraint firstItem="0Pf-2v-azM" firstAttribute="centerX" secondItem="Q3w-2Y-AeC" secondAttribute="centerX" id="m7a-Zt-cBI"/>
@@ -79,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="ageField" destination="1kz-ZG-Pfr" id="N3m-gh-GzP"/>
+                        <outlet property="imageButton" destination="1wX-iz-lRO" id="a9c-VA-GwD"/>
                         <outlet property="nameField" destination="zlu-Xt-8Mc" id="lkP-bH-Zmu"/>
                     </connections>
                 </viewController>
@@ -87,4 +101,7 @@
             <point key="canvasLocation" x="14" y="149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="112.5" height="112.5"/>
+    </resources>
 </document>

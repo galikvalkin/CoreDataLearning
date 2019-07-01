@@ -19,6 +19,9 @@
     [super awakeFromNib];
     self.labelText.text = @"Name:";
     self.ageText.text = @"Age:";
+    
+//    self
+//    self.avatar = [UIImage imageNamed:@"logo"];
 }
 
 @end

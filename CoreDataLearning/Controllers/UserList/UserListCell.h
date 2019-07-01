@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelValue;
 @property (weak, nonatomic) IBOutlet UILabel *ageText;
 @property (weak, nonatomic) IBOutlet UILabel *ageValue;
+@property (weak, nonatomic) IBOutlet UIImageView *avatar;
 
 @end

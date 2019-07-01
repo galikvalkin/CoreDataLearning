@@ -22,9 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Users";
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addNew)];
-    self.navigationItem.rightBarButtonItem = rightButton;
     self.content = [self.dataController userList];
     
     NSLog(@"UserListController now used");
@@ -68,6 +65,10 @@
     NSString *age = [NSString stringWithFormat:@"%@", [item valueForKey:@"age"]];
     cell.ageValue.text = age;
     
+    UIImage *sampleimage = [UIImage imageWithData:[item valueForKey:@"image"]];
+//    UIImage *sampleimage = [UIImage imageNamed: @"logo"];
+    
+    [cell.avatar setImage:sampleimage];
     
     return cell;
 }
