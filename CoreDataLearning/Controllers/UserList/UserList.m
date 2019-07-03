@@ -9,6 +9,7 @@
 #import "UserList.h"
 #import "UserListCell.h"
 #import "AppDelegate.h"
+#import "UserMO.h"
 
 @interface UserListConroller ()
 @property (strong, nonatomic) IBOutlet UITableView *table;
@@ -59,14 +60,13 @@
     
     UserListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
 
-    NSManagedObject *item = self.content[indexPath.section];
+    UserMO *item = self.content[indexPath.section];
     
-    cell.labelValue.text = [item valueForKey:@"name"];
-    NSString *age = [NSString stringWithFormat:@"%@", [item valueForKey:@"age"]];
+    cell.labelValue.text = item.name;
+    NSString *age = [NSString stringWithFormat:@"%lu", item.age];
     cell.ageValue.text = age;
     
-    UIImage *sampleimage = [UIImage imageWithData:[item valueForKey:@"image"]];
-//    UIImage *sampleimage = [UIImage imageNamed: @"logo"];
+    UIImage *sampleimage = [UIImage imageWithData:item.image];
     
     [cell.avatar setImage:sampleimage];
     

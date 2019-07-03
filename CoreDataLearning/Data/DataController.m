@@ -8,6 +8,7 @@
 
 #import <CoreData/CoreData.h>
 #import "DataController.h"
+#import "UserMO.h"
 
 @implementation DataController
 
@@ -67,7 +68,13 @@
     
     NSArray *results = [context executeFetchRequest:requestFromLocation error:nil];
     
-    return results;
+    NSMutableArray *parsed = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < [results count]; i++) {
+        [parsed addObject:(UserMO *)results[i]];
+    }
+    
+    return parsed;
 }
 
 - (void)deleteUserList {
