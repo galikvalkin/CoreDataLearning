@@ -59,7 +59,6 @@
     NSString *cellId = @"UserListCell";
     
     UserListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-
     UserMO *item = self.content[indexPath.section];
     
     cell.labelValue.text = item.name;

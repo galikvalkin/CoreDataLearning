@@ -32,7 +32,7 @@
 - (void)addUser:(NSDictionary *)data {
     if (self.persistentContainer != nil) {
         NSManagedObjectContext *context = self.persistentContainer.viewContext;
-        NSManagedObject *entity = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+        UserMO *entity = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
         
         for (NSString *key in data) {
             id value = data[key];
