@@ -17,7 +17,7 @@
 @dynamic image;
 
 - (NSString *)ageString {
-    return [NSString stringWithFormat:@"%lu", self.age];
+    return [NSString stringWithFormat:@"%d", self.age];
 }
 
 - (UIImage *)getImage {

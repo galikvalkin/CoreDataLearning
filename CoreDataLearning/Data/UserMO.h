@@ -13,7 +13,7 @@
 @interface UserMO : NSManagedObject
 
 @property (nonatomic, weak) NSString *name;
-@property (nonatomic) NSUInteger age;
+@property (nonatomic) int32_t age;
 @property (nonatomic, weak) NSData *image;
 
 - (NSString *)ageString;
