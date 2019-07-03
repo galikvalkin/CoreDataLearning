@@ -6,6 +6,7 @@
 //  Copyright © 2019 Valentine Galkin. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
@@ -14,5 +15,9 @@
 @property (nonatomic, weak) NSString *name;
 @property (nonatomic) NSUInteger age;
 @property (nonatomic, weak) NSData *image;
+
+- (NSString *)ageString;
+
+- (UIImage *)getImage;
 
 @end

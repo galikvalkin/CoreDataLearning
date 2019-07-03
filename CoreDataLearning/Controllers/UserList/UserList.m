@@ -63,12 +63,8 @@
     UserMO *item = self.content[indexPath.section];
     
     cell.labelValue.text = item.name;
-    NSString *age = [NSString stringWithFormat:@"%lu", item.age];
-    cell.ageValue.text = age;
-    
-    UIImage *sampleimage = [UIImage imageWithData:item.image];
-    
-    [cell.avatar setImage:sampleimage];
+    cell.ageValue.text = [item ageString];
+    [cell.avatar setImage:[item getImage]];
     
     return cell;
 }
